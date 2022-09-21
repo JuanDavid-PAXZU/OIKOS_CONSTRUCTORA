@@ -5,3 +5,72 @@
 html{
     scroll-behavior: smooth;
 }
+
+:root{
+    --color-c1:#0A102D;
+    --color-c2:#182360;
+    --color-c3:#F0F2F7;
+    --color-c4:#FFFFFF;
+    --color-grad_blanco:linear-gradient(104.32deg, #FFFFFF 0%, #E4E4E4 100%), #C2C2C2;
+    --color-grad_azul_osc:linear-gradient(135.57deg, #4565B3 0%, #2B478B 54.17%, #13203E 100%);
+    --color-grad_azul_cla:linear-gradient(115.4deg, #2B478B 29.76%, #5077D6 85.08%);
+}
+
+.cont_input{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+.cont_input_x2{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+input, select, textarea{
+    width: 100%;
+    background: #F2F2F2;
+    border: 1px solid #E1E1E1;
+    border-radius: 6px;
+}
+
+.btn{
+    background: linear-gradient(90deg, #28468D 0%, #466DCD 100%);
+    border-radius: 100px;
+    font-weight: 700;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    margin: 0;
+}
+
+h1{
+    font-size: 53px;
+}
+
+
+/* HEADER */
+
+
+/* FOOTER */
+
+
+
+@media screen and (max-width:1200px){
+
+}
+@media screen and (max-width:1050px){
+    
+}
+@media screen and (max-width:768px){
+    h1{
+        font-size: 32px;
+    }
+}
+@media screen and (max-width:480px){
+
+}
