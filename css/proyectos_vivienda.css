@@ -306,8 +306,8 @@
   background-position: center bottom;
   width: 100%;
   height: 100%;
-  max-height: 80px;
-  top: 0;
+  max-height: 40px;
+  top: -2px;
   left: 0;
   right: 0;
   z-index: 2;
@@ -321,8 +321,8 @@
   background-position: center top;
   width: 100%;
   height: 100%;
-  max-height: 80px;
-  bottom: 0;
+  max-height: 40px;
+  bottom: -2px;
   left: 0;
   right: 0;
   z-index: 2;
@@ -332,18 +332,68 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: stretch;
+  position: relative;
+  min-height: 460px;
+}
+.c_futuros_proyectos::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 400px;
+  height: 300px;
+  border-radius: 100%;
+  background: rgba(54, 107, 236, 0.35);
+  filter: blur(54px);
+  margin: auto;
+  mix-blend-mode: lighten;
 }
 .c_futuros_proyectos .info_fp {
   background: url("../images/diseno/proyectos_vivienda/bg_futuros.jpg"), linear-gradient(107.08deg, #4565B3 0%, #2B478B 31.11%, #13203E 100%);
   background-blend-mode: multiply;
   background-size: cover;
   background-position: center;
-  padding: 60px;
+  padding: 0 100px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
   height: 100%;
+  position: relative;
+  z-index: 1;
+  gap: 30px;
+}
+.c_futuros_proyectos .info_fp::before, .c_futuros_proyectos .info_fp:after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 70px;
+  background: url("../images/diseno/proyectos_vivienda/puntos.svg") no-repeat center;
+  background-size: contain;
+  left: 3%;
+  top: 20%;
+}
+.c_futuros_proyectos .info_fp:after {
+  right: 3%;
+  bottom: 20%;
+  top: initial;
+  left: initial;
+  transform: rotate(180deg);
+}
+.c_futuros_proyectos .info_fp h5 {
+  letter-spacing: 0.365em;
+  text-transform: uppercase;
+  color: #FFED00;
+  font-weight: 600;
+  font-size: 20px;
+}
+.c_futuros_proyectos .info_fp h2 {
+  font-weight: 900;
+  color: #FFF;
+  font-size: 40px;
+  max-width: 500px;
+  line-height: 1.1;
 }
 .c_futuros_proyectos .img_fp {
   width: 100%;
@@ -353,6 +403,110 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.swiper-button-next, .swiper-button-prev {
+  background: #182360;
+  border: 3px solid #FAFAFA;
+  border-radius: 100px;
+  width: 35px;
+  height: 35px;
+}
+
+.swiper-button-next:after, .swiper-button-prev:after {
+  font-size: 16px;
+  font-weight: 800;
+  color: #FFF;
+}
+
+.swiper-pagination {
+  bottom: 60px !important;
+}
+.swiper-pagination .swiper-pagination-bullet {
+  background-color: #FFF;
+  width: 10px;
+  border-radius: 100px;
+  height: 10px;
+  transition: 400ms ease;
+}
+.swiper-pagination .swiper-pagination-bullet-active {
+  width: 20px;
+}
+
+.swiper-button-prev, .swiper-rtl .swiper-button-next {
+  left: 25px;
+}
+
+.swiper-button-next, .swiper-rtl .swiper-button-prev {
+  right: 25px;
+}
+
+.s_proyectos_ejecutados {
+  padding: 30px 0;
+}
+
+.cont_proyecto_logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+.cont_proyecto_logo a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #E4E4E4;
+  border-radius: 9px;
+  overflow: hidden;
+  max-width: 100px;
+  cursor: pointer;
+}
+.cont_proyecto_logo a:nth-child(1) {
+  animation-delay: 200ms;
+}
+.cont_proyecto_logo a:nth-child(2) {
+  animation-delay: 300ms;
+}
+.cont_proyecto_logo a:nth-child(3) {
+  animation-delay: 400ms;
+}
+.cont_proyecto_logo a:nth-child(4) {
+  animation-delay: 500ms;
+}
+.cont_proyecto_logo a:nth-child(5) {
+  animation-delay: 600ms;
+}
+.cont_proyecto_logo a:nth-child(6) {
+  animation-delay: 700ms;
+}
+.cont_proyecto_logo a:nth-child(7) {
+  animation-delay: 800ms;
+}
+.cont_proyecto_logo a img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.holder {
+  width: 100%;
+  max-width: 750px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+.holder a:not(.jp-previous, .jp-next) {
+  display: none;
+}
+.holder .jp-previous, .holder .jp-next {
+  color: #182360;
+  font-weight: 700;
+  font-size: 15px;
+  cursor: pointer;
+}
+.holder .jp-previous.jp-disabled, .holder .jp-next.jp-disabled {
+  opacity: 0.5;
 }
 
 /* RESPONISIVE */

@@ -13,6 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="plugins/swiperjs/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="css/estilos.css">
     <link rel="stylesheet" href="css/proyectos_vivienda.css">
     
@@ -502,30 +503,104 @@
         </section>
 
         <section class="s_futuros_proyectos">
-            <div class="c_futuros_proyectos">
+            
+            <!-- Swiper -->
+            <div class="swiper swiperFuturos">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="c_futuros_proyectos">
+                            <div class="info_fp">
+                                <h5>Futuros Proyectos</h5>
+                                <h2>Lorem ipsum dolor sit
+                                    amet, consectetur adipiscing elit.
+                                </h2>
+                                <a href="" class="btn contacto_h">Conoce más</a>
+                            </div>
+                            <div class="img_fp">
+                                <img width="1280" height="720" src="images/diseno/proyectos_vivienda/img_banner_futuros.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="c_futuros_proyectos">
+                            <div class="info_fp">
+                                <h5>Futuros Proyectos</h5>
+                                <h2>Lorem ipsum dolor sit
+                                    amet, consectetur adipisasdasdasddasacing elit.
+                                </h2>
+                                <a href="" class="btn contacto_h">Conoce más</a>
+                            </div>
+                            <div class="img_fp">
+                                <img width="1280" height="720" src="images/diseno/proyectos_vivienda/img_banner_futuros.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="c_futuros_proyectos">
+                            <div class="info_fp">
+                                <h5>Futuros Proyectos</h5>
+                                <h2>Lorem ipsum dolor sit
+                                    amur adipiscing elit.
+                                </h2>
+                                <a href="" class="btn contacto_h">Conoce más</a>
+                            </div>
+                            <div class="img_fp">
+                                <img width="1280" height="720" src="images/diseno/proyectos_vivienda/img_banner_futuros.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
 
                 
-                <div class="info_fp">
-                    <h5>Futuros Proyectos</h5>
-                    <h2>Lorem ipsum dolor sit
-                        amet, consectetur adipiscing elit.
-                    </h2>
-                    <a href="" class="btn contacto_h">Conoce más</a>
-                </div>
-                <div class="img_fp">
-                    <img width="1280" height="720" src="images/diseno/proyectos_vivienda/img_banner_futuros.jpg" alt="">
-                </div>
+                
 
 
-            </div>
         </section>
 
         <section class="s_proyectos_ejecutados">
             <div class="cnt_central">
                 <div class="c_proyectos_ejecutados">
 
+                    <div class="title_section al-center"> <span> Proyectos</span> Ejecutados</div>
+
                     <div class="tabs_proyectos_eject">
-                        
+
+                        <div class="holder"></div>
+
+                        <div class="cont_proyecto_logo" id="itemContainer">
+                            <a class="animate__animated animate__fadeIn" data-proyecto="1">
+                                <img width="76" height="65" src="images/diseno/proyectos_vivienda/logo1.png" alt="">
+                            </a>
+                            <a class="animate__animated animate__fadeIn" data-proyecto="2">
+                                <img width="76" height="65" src="images/diseno/proyectos_vivienda/logo2.png" alt="">
+                            </a>
+                            <a class="animate__animated animate__fadeIn" data-proyecto="3">
+                                <img width="76" height="65" src="images/diseno/proyectos_vivienda/logo3.png" alt="">
+                            </a>
+                            <a class="animate__animated animate__fadeIn" data-proyecto="4">
+                                <img width="76" height="65" src="images/diseno/proyectos_vivienda/logo1.png" alt="">
+                            </a>
+                            <a class="animate__animated animate__fadeIn" data-proyecto="5">
+                                <img width="76" height="65" src="images/diseno/proyectos_vivienda/logo2.png" alt="">
+                            </a>
+                            <a class="animate__animated animate__fadeIn" data-proyecto="6">
+                                <img width="76" height="65" src="images/diseno/proyectos_vivienda/logo3.png" alt="">
+                            </a>
+                            <a class="animate__animated animate__fadeIn" data-proyecto="7">
+                                <img width="76" height="65" src="images/diseno/proyectos_vivienda/logo1.png" alt="">
+                            </a>
+                            <a class="animate__animated animate__fadeIn" data-proyecto="8">
+                                <img width="76" height="65" src="images/diseno/proyectos_vivienda/logo2.png" alt="">
+                            </a>
+                            <a class="animate__animated animate__fadeIn" data-proyecto="9">
+                                <img width="76" height="65" src="images/diseno/proyectos_vivienda/logo3.png" alt="">
+                            </a>
+                        </div>
                     </div>
 
                     <div class="cont_proyecto_eject">
@@ -710,7 +785,51 @@
     <!-- SCRIPT -->
 
     <script src="plugins/swiperjs/swiper-bundle.min.js"></script>
+    <script src="plugins/jpages/jPages.min.js"></script>
     <script src="js/funciones.js"></script>
+
+    <script>
+        $(document).ready(function(){
+
+            let swiper = new Swiper(".swiperFuturos", {
+                slidesPerView:1,
+                effect: "fade",
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+            });
+
+
+          
+
+            $(function(){
+                /* initiciate jPages */
+                $("div.holder").jPages({
+                    previous:'← Anterior',
+                    next:'Siguiente →',
+                    perPage:7,
+                    containerID : "itemContainer",
+                    animation   : "bounceInUp"
+                });
+                /* on select change */
+                $("select").change(function(){
+                    /* get new css animation */
+                var newAnimation = $(this).val();
+                /* destroy jPages and initiate plugin again */
+                $("div.holder").jPages("destroy").jPages({
+                        containerID   : "itemContainer",
+                        animation     : newAnimation
+                    });
+                });
+            });
+
+        })
+      </script>
 
 </body>
 </html> 
