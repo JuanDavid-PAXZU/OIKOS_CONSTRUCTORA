@@ -60,4 +60,12 @@ $(document).ready(function(){
         navFooter();
     }
 
+    /* FUNCION INTERNA PROYECTOS FILTRO MOBILE */
+
+    const btnFiltro = document.querySelector('.act_filtro_mobile');
+    const containerFiltro = document.querySelector('.filtro_proyectos');
+
+    $(btnFiltro).click(function(){
+        $(containerFiltro).slideToggle().css('display', 'flex')
+    })
 })

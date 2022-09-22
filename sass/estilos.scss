@@ -37,6 +37,32 @@ input, select, textarea{
     background: linear-gradient(90deg, #28468D 0%, #466DCD 100%);
     border-radius: 100px;
     font-weight: 700;
+    border: 0;
+    outline: 0;
+    height: 35px;
+    min-width: 120px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.btn_link{
+
+}
+.btn_link_reset{
+  color: #FF0000;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 0;
+  outline: 0;
+  background-color: transparent;
+  font-size: 15px;
+  cursor: pointer;
+  position: relative;
+  span{
+    font-weight: 400;
+  }
 }
 img, a {
     border: 0;
@@ -136,7 +162,7 @@ h1{
   }
   .nav_bar_h{
     width: 100%;
-    background: var(--c_pri);
+    background: var(--color-c2);
     display: flex;
     justify-content: flex-end;
     box-sizing: border-box;
@@ -176,6 +202,7 @@ h1{
   .nav{
     width: 80%;
     justify-content: flex-end;
+    transition: 400ms ease-out;
     ul{
       width: auto;
       display: flex;
@@ -266,16 +293,16 @@ h1{
     width: 100%;
     position: relative;
     padding-top: 93px;
-    display: inline-flex;
+    display: block;
     flex-direction: column;
     justify-content: center;
+    background-color: #FAFAFA;
   }
   .cnt_central{
     width: 100%;
     max-width: 1280px;
     margin: 0 auto;
     position: relative;
-    display: inline-block;
     padding: 0 20px;
   }
   .miga {
@@ -290,6 +317,7 @@ h1{
     position: relative;
     font-weight: 400;
     text-align: right;
+    margin: 20px 0 0;
     a{
       color: #000;
       &:hover{
@@ -297,22 +325,28 @@ h1{
       }
     }
   }
-  .h_oikos{
-    font-size: 52px;
-    font-weight:900;
-    color: var(--c_pri);
-    text-align: center;
-    width: 100%;
-    padding: 32px 0;
-    &::before{
-      content: "OIKOS";
-      width: 100%;
-      display: block;
-      font-size: 16px;
-      color: var(--c_pri);
-      font-weight: 400;
-    }
+.title_section{
+  font-size: 42px;
+  color: var(--color-c2);
+  font-weight: 800;
+  margin: 30px 0 40px;
+  span{
+    font-weight: 400;
   }
+}
+
+.al_left{
+  text-align: left;
+  justify-content: flex-start;
+}
+.al_center{
+  text-align: center;
+  justify-content: center;
+}
+.al_right{
+  text-align: right;
+  justify-content: flex-end;
+}
 
 
 /* FOOTER */
@@ -529,7 +563,17 @@ h1{
 
 /******/
 
+@media screen and (max-width:1400px) { 
+  .nav ul li{
+    margin: 0 1%;
+  }
+}
 @media screen and (max-width:1200px) { 
+  .nav ul li a{
+    font-size: 15px;
+    font-weight: 600;
+    text-align: center;
+  }
 }
 @media screen and (max-width:1050px) { 
   .ic_pse{
@@ -551,7 +595,7 @@ h1{
     top: 0;
     right: -100%;
     z-index: 2;
-    background: var(--c_pri);
+    background: var(--color-c2);
     box-sizing: border-box;
     padding: 32px 80px 32px 40px;
     width: 100%;
@@ -559,6 +603,7 @@ h1{
     max-width: 350px;
     margin: 0;
     overflow-y:auto;
+    transition: 400ms ease-out;
     &.active{
       right: 0;
     }
@@ -850,7 +895,7 @@ input[type=file]::-webkit-file-upload-button{
 }
 
 @media screen and (max-width:768px) { 
-    h1{
+    .title_section{
         font-size: 32px;
     }
   /*   ESTILOS FOOTER */
