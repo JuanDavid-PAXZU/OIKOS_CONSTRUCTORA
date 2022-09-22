@@ -573,37 +573,37 @@
                         <div class="holder"></div>
 
                         <div class="cont_proyecto_logo" id="itemContainer">
-                            <a class="animate__animated animate__fadeIn" data-proyecto="1">
+                            <a class="animate__animated animate__fadeIn tab_logo_eject" data-proyecto="1">
                                 <img width="76" height="65" src="images/diseno/proyectos_vivienda/logo1.png" alt="">
                             </a>
-                            <a class="animate__animated animate__fadeIn" data-proyecto="2">
+                            <a class="animate__animated animate__fadeIn tab_logo_eject" data-proyecto="2">
                                 <img width="76" height="65" src="images/diseno/proyectos_vivienda/logo2.png" alt="">
                             </a>
-                            <a class="animate__animated animate__fadeIn" data-proyecto="3">
+                            <a class="animate__animated animate__fadeIn tab_logo_eject" data-proyecto="3">
                                 <img width="76" height="65" src="images/diseno/proyectos_vivienda/logo3.png" alt="">
                             </a>
-                            <a class="animate__animated animate__fadeIn" data-proyecto="4">
+                            <a class="animate__animated animate__fadeIn tab_logo_eject" data-proyecto="4">
                                 <img width="76" height="65" src="images/diseno/proyectos_vivienda/logo1.png" alt="">
                             </a>
-                            <a class="animate__animated animate__fadeIn" data-proyecto="5">
+                            <a class="animate__animated animate__fadeIn tab_logo_eject" data-proyecto="5">
                                 <img width="76" height="65" src="images/diseno/proyectos_vivienda/logo2.png" alt="">
                             </a>
-                            <a class="animate__animated animate__fadeIn" data-proyecto="6">
+                            <a class="animate__animated animate__fadeIn tab_logo_eject" data-proyecto="6">
                                 <img width="76" height="65" src="images/diseno/proyectos_vivienda/logo3.png" alt="">
                             </a>
-                            <a class="animate__animated animate__fadeIn" data-proyecto="7">
+                            <a class="animate__animated animate__fadeIn tab_logo_eject" data-proyecto="7">
                                 <img width="76" height="65" src="images/diseno/proyectos_vivienda/logo1.png" alt="">
                             </a>
-                            <a class="animate__animated animate__fadeIn" data-proyecto="8">
+                            <a class="animate__animated animate__fadeIn tab_logo_eject" data-proyecto="8">
                                 <img width="76" height="65" src="images/diseno/proyectos_vivienda/logo2.png" alt="">
                             </a>
-                            <a class="animate__animated animate__fadeIn" data-proyecto="9">
+                            <a class="animate__animated animate__fadeIn tab_logo_eject" data-proyecto="9">
                                 <img width="76" height="65" src="images/diseno/proyectos_vivienda/logo3.png" alt="">
                             </a>
                         </div>
                     </div>
 
-                    <div class="cont_proyecto_eject">
+                    <div class="cont_proyecto_eject" data-proyecto="1">
                         
                     </div>
                 </div>
@@ -791,6 +791,8 @@
     <script>
         $(document).ready(function(){
 
+            /* FUNCION SLIDER PROYECTOS FUTUROS */
+
             let swiper = new Swiper(".swiperFuturos", {
                 slidesPerView:1,
                 effect: "fade",
@@ -805,7 +807,7 @@
             });
 
 
-          
+            /* FUNCION PAGINADOR PROYECTOS EJECUTADOS */
 
             $(function(){
                 /* initiciate jPages */
@@ -826,6 +828,31 @@
                         animation     : newAnimation
                     });
                 });
+            });
+
+            /* FUNCION TABS PROYECTOS EJECUTADOS */
+
+            const tabLogo = document.querySelectorAll('.tab_logo_eject');
+            const containerProyecto = document.querySelectorAll('.tab_logo_eject');
+            let comparador = null;
+
+            tabLogo.forEach((logo) => {
+                logo.addEventListener('click', (e) => {
+                    
+                    tabLogo.forEach((el) => {
+                        el.classList.remove('active');
+                    });
+                    e.currentTarget.classList.add('active');
+                    comparador = e.currentTarget.dataset.proyecto;
+
+                    containerProyecto.forEach((cont) => {
+                        if(cont.dataset.proyecto === comparador){
+                            console.log('hola')
+                        }else{
+
+                        }
+                    });
+                })
             });
 
         })
