@@ -296,7 +296,6 @@
   position: relative;
   width: 100%;
   min-height: 460px;
-  padding: 60px 20px;
 }
 .s_futuros_proyectos::before {
   content: "";
@@ -333,6 +332,25 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
+}
+.c_futuros_proyectos .info_fp {
+  background: url("../images/diseno/proyectos_vivienda/bg_futuros.jpg"), linear-gradient(107.08deg, #4565B3 0%, #2B478B 31.11%, #13203E 100%);
+  background-blend-mode: multiply;
+  background-size: cover;
+  background-position: center;
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.c_futuros_proyectos .img_fp {
+  width: 100%;
+  height: 100%;
+}
+.c_futuros_proyectos .img_fp img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /* RESPONISIVE */
