@@ -603,9 +603,57 @@
                         </div>
                     </div>
 
-                    <div class="cont_proyecto_eject" data-proyecto="1">
-                        
+                    <div class="cont_proyecto_eject active" data-proyecto="1">
+                        <div class="info_pe">
+                            <div class="title_pe">
+                                <h4>OIKOS</h4>
+                                <h2>PALMA REAL</h2>
+                            </div>
+                            <div class="lugar">
+                                Ricaurte - Cundinamarca Sector Peñalisa
+                            </div>
+                            <div class="info_datos_pe">
+                                <div> <b> Dirección:</b> Calle 67A #113c-27</div>
+                                <div> <b> Ciudad:</b> Bogotá</div>
+                                <div> <b> Zona:</b> Engativá</div>
+                            </div>
+                            <a href="" class="btn contacto_h">Ver proyecto</a>
+                        </div>
+                        <div class="c_slider_pe">
+                            <!-- Swiper -->
+                            <div class="swiper swiperPe">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <img width="530" height="390" src="images/diseno/proyectos_vivienda/img_banner_futuros.jpg" alt="">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img width="530" height="390" src="https://picsum.photos/200/300" alt="">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img width="530" height="390" src="images/diseno/proyectos_vivienda/img_banner_futuros.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="swiper-pagination"></div>
+                            </div>
+                        </div>
                     </div>
+                    <div class="cont_proyecto_eject" data-proyecto="2">
+                        <div class="info_pe">
+                            aaaaa
+                        </div>
+                        <div class="c_slider_pe">
+                            ffffff
+                        </div>
+                    </div>
+                    <div class="cont_proyecto_eject" data-proyecto="3">
+                        <div class="info_pe">
+                            asdasd
+                        </div>
+                        <div class="c_slider_pe">
+                            sss
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </section>
@@ -622,7 +670,7 @@
             <div class="cnt_gen_inf_lat_pie">
                 <div class="cnt_logos_pie">
                     <a href="" class="logo_pie">
-                        <img src="images/diseno/logo_constructora.svg" alt="">
+                        <img src="images/diseno/logo_" alt="">
                     </a>
                     <a href="" class="logo_pie">
                         <img src="images/diseno/logo_storage.svg" alt="">
@@ -793,42 +841,86 @@
 
             /* FUNCION SLIDER PROYECTOS FUTUROS */
 
-            let swiper = new Swiper(".swiperFuturos", {
-                slidesPerView:1,
-                effect: "fade",
-                navigation: {
-                    nextEl: ".swiper-button-next",
-                    prevEl: ".swiper-button-prev",
-                },
-                pagination: {
-                    el: ".swiper-pagination",
-                    clickable: true,
-                },
-            });
+            function proyectoFuturo(){
+                let swiper = new Swiper(".swiperFuturos", {
+                    slidesPerView:1,
+                    effect: "fade",
+                    navigation: {
+                        nextEl: ".swiper-button-next",
+                        prevEl: ".swiper-button-prev",
+                    },
+                    pagination: {
+                        el: ".swiper-pagination",
+                        clickable: true,
+                    },
+                });
+            }
+            proyectoFuturo();
+
+
+            /* FUNCION SLIDER PROYECTO EJECUTADO */
+
+            function proyectoEjecutado(){
+                let swiper = new Swiper(".swiperPe", {
+                    slidesPerView:1,
+                    effect: "fade",
+                    pagination: {
+                        el: ".swiper-pagination",
+                    },
+                });
+            }
+
+            proyectoEjecutado();
 
 
             /* FUNCION PAGINADOR PROYECTOS EJECUTADOS */
 
-            $(function(){
-                /* initiciate jPages */
-                $("div.holder").jPages({
-                    previous:'← Anterior',
-                    next:'Siguiente →',
-                    perPage:7,
-                    containerID : "itemContainer",
-                    animation   : "bounceInUp"
-                });
-                /* on select change */
-                $("select").change(function(){
-                    /* get new css animation */
-                var newAnimation = $(this).val();
-                /* destroy jPages and initiate plugin again */
-                $("div.holder").jPages("destroy").jPages({
-                        containerID   : "itemContainer",
-                        animation     : newAnimation
+            if ($(window).width() >= 960) {
+                $(function(){
+                    /* initiciate jPages */
+                    $("div.holder").jPages({
+                        previous:'← Anterior',
+                        next:'Siguiente →',
+                        perPage:7,
+                        containerID : "itemContainer",
+                        animation   : "bounceInUp"
+                    });
+                    /* on select change */
+                    $("select").change(function(){
+                        /* get new css animation */
+                    var newAnimation = $(this).val();
+                    /* destroy jPages and initiate plugin again */
+                    $("div.holder").jPages("destroy").jPages({
+                            containerID   : "itemContainer",
+                            animation     : newAnimation
+                        });
                     });
                 });
-            });
+            }
+            else {
+                $(function(){
+                    /* initiciate jPages */
+                    $("div.holder").jPages({
+                        previous:'← Anterior',
+                        next:'Siguiente →',
+                        perPage:4,
+                        containerID : "itemContainer",
+                        animation   : "bounceInUp"
+                    });
+                    /* on select change */
+                    $("select").change(function(){
+                        /* get new css animation */
+                    var newAnimation = $(this).val();
+                    /* destroy jPages and initiate plugin again */
+                    $("div.holder").jPages("destroy").jPages({
+                            containerID   : "itemContainer",
+                            animation     : newAnimation
+                        });
+                    });
+                });
+            }
+
+            
 
             /* FUNCION TABS PROYECTOS EJECUTADOS */
 
@@ -847,9 +939,9 @@
 
                     containerProyecto.forEach((cont) => {
                         if(cont.dataset.proyecto === comparador){
-                            console.log('hola')
+                            cont.classList.add('active');
                         }else{
-
+                            cont.classList.remove('active');
                         }
                     });
                 })
