@@ -102,6 +102,16 @@ h1{
   .btn_z_clientes:hover {
     color: var(--c_link);
   }
+  .btn_oikos_logos{
+    display: inline-block;
+    margin: 0 8px;
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      max-width: 38px;
+    }
+  }
   .btn_pse {
     padding: 0 0 0 12px;
     display: flex;
@@ -256,14 +266,16 @@ h1{
     width: 100%;
     position: relative;
     padding-top: 93px;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
   }
   .cnt_central{
     width: 100%;
     max-width: 1280px;
-    margin: auto;
+    margin: 0 auto;
     position: relative;
     display: inline-block;
-    box-sizing: border-box;
     padding: 0 20px;
   }
   .miga {
@@ -273,11 +285,16 @@ h1{
     text-align: right;
     display: flex;
     align-items: center;
+    justify-content: flex-end;
     gap: 8px;
     position: relative;
-    font-weight: 700;
+    font-weight: 400;
+    text-align: right;
     a{
-      color: #5E5E5E;
+      color: #000;
+      &:hover{
+        text-decoration: underline;
+      }
     }
   }
   .h_oikos{
