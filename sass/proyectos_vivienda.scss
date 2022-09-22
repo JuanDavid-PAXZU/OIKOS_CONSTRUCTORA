@@ -272,6 +272,14 @@
 
 .act_filtro_mobile{
     display: none;
+    color: var(--color-c2);
+    font-size: 18px;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: #FFF;
+    padding: 20px;
+    border-radius: 10px;
 }
 .container_filtro{
     position: relative;
@@ -290,14 +298,12 @@
 
 }
 @media screen and (max-width:1050px){
+    .c_proyecto_vivienda:after{
+        bottom: initial;
+        top: 0;
+    }
     .act_filtro_mobile{
         display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 10px;
-        background: #FFF;
-        padding: 20px;
-        border-radius: 10px;
     }
     .filtro_proyectos{
         display: none;

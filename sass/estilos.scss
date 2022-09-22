@@ -491,6 +491,7 @@ h1{
     width: 100%;
     display: flex;
     padding: 8px 0;
+    gap: 10px;
   }
   .campo_susc_pie{
     width: 65%; 
@@ -508,7 +509,8 @@ h1{
     border: 1px solid #ccc;
     cursor: pointer;
     &:hover{
-      background: var(--c_pri);  
+      background: var(--c_pri);
+      color: #FFF;
     }
   }
   .datos_pie{
@@ -924,7 +926,7 @@ input[type=file]::-webkit-file-upload-button{
       bottom: 0;
       width: 20px;
       height: 20px;
-      font-family: 'Font Awesome 5 Free';
+      font-family: 'Font Awesome 5 Pro';
       display: flex;
       align-items: center;
       justify-content: center;
