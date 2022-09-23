@@ -573,7 +573,7 @@
                         <div class="holder"></div>
 
                         <div class="cont_proyecto_logo" id="itemContainer">
-                            <a class="animate__animated animate__fadeIn tab_logo_eject" data-proyecto="1">
+                            <a class="animate__animated animate__fadeIn tab_logo_eject active" data-proyecto="1">
                                 <img width="76" height="65" src="images/diseno/proyectos_vivienda/logo1.png" alt="">
                             </a>
                             <a class="animate__animated animate__fadeIn tab_logo_eject" data-proyecto="2">
@@ -627,7 +627,7 @@
                                         <img width="530" height="390" src="images/diseno/proyectos_vivienda/img_banner_futuros.jpg" alt="">
                                     </div>
                                     <div class="swiper-slide">
-                                        <img width="530" height="390" src="https://picsum.photos/200/300" alt="">
+                                        <img width="530" height="390" src="https://picsum.photos/600/400" alt="">
                                     </div>
                                     <div class="swiper-slide">
                                         <img width="530" height="390" src="images/diseno/proyectos_vivienda/img_banner_futuros.jpg" alt="">
@@ -639,20 +639,74 @@
                     </div>
                     <div class="cont_proyecto_eject" data-proyecto="2">
                         <div class="info_pe">
-                            aaaaa
+                            <div class="title_pe">
+                                <h4>OIKOS</h4>
+                                <h2>SAVANA</h2>
+                            </div>
+                            <div class="lugar">
+                                Ricaurte - Cundinamarca Sector Peñalisa
+                            </div>
+                            <div class="info_datos_pe">
+                                <div> <b> Dirección:</b> Calle 67A #113c-27</div>
+                                <div> <b> Ciudad:</b> Bogotá</div>
+                                <div> <b> Zona:</b> Engativá</div>
+                            </div>
+                            <a href="" class="btn contacto_h">Ver proyecto</a>
                         </div>
                         <div class="c_slider_pe">
-                            ffffff
+                            <!-- Swiper -->
+                            <div class="swiper swiperPe">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <img width="530" height="390" src="images/diseno/proyectos_vivienda/img_banner_futuros.jpg" alt="">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img width="530" height="390" src="https://picsum.photos/600/400" alt="">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img width="530" height="390" src="images/diseno/proyectos_vivienda/img_banner_futuros.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="swiper-pagination"></div>
+                            </div>
                         </div>
                     </div>
                     <div class="cont_proyecto_eject" data-proyecto="3">
                         <div class="info_pe">
-                            asdasd
+                            <div class="title_pe">
+                                <h4>OIKOS</h4>
+                                <h2>SANTA CLARA</h2>
+                            </div>
+                            <div class="lugar">
+                                Ricaurte - Cundinamarca Sector Peñalisa
+                            </div>
+                            <div class="info_datos_pe">
+                                <div> <b> Dirección:</b> Calle 67A #113c-27</div>
+                                <div> <b> Ciudad:</b> Bogotá</div>
+                                <div> <b> Zona:</b> Engativá</div>
+                            </div>
+                            <a href="" class="btn contacto_h">Ver proyecto</a>
                         </div>
                         <div class="c_slider_pe">
-                            sss
+                            <!-- Swiper -->
+                            <div class="swiper swiperPe">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <img width="530" height="390" src="images/diseno/proyectos_vivienda/img_banner_futuros.jpg" alt="">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img width="530" height="390" src="https://picsum.photos/600/400" alt="">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img width="530" height="390" src="images/diseno/proyectos_vivienda/img_banner_futuros.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="swiper-pagination"></div>
+                            </div>
                         </div>
                     </div>
+
+                    
 
                 </div>
             </div>
@@ -843,6 +897,9 @@
 
             function proyectoFuturo(){
                 let swiper = new Swiper(".swiperFuturos", {
+                    autoplay: {
+                        delay: 8000,
+                    },
                     slidesPerView:1,
                     effect: "fade",
                     navigation: {
@@ -862,9 +919,14 @@
 
             function proyectoEjecutado(){
                 let swiper = new Swiper(".swiperPe", {
+                    autoplay: {
+                        delay: 8000,
+                    },
+                    loop:true,
                     slidesPerView:1,
                     effect: "fade",
                     pagination: {
+                        clickable:true,
                         el: ".swiper-pagination",
                     },
                 });
@@ -897,7 +959,7 @@
                     });
                 });
             }
-            else {
+            else if ($(window).width() >= 480) {
                 $(function(){
                     /* initiciate jPages */
                     $("div.holder").jPages({
@@ -919,13 +981,35 @@
                     });
                 });
             }
+            else{
+                $(function(){
+                    /* initiciate jPages */
+                    $("div.holder").jPages({
+                        previous:'← Anterior',
+                        next:'Siguiente →',
+                        perPage:3,
+                        containerID : "itemContainer",
+                        animation   : "bounceInUp"
+                    });
+                    /* on select change */
+                    $("select").change(function(){
+                        /* get new css animation */
+                    var newAnimation = $(this).val();
+                    /* destroy jPages and initiate plugin again */
+                    $("div.holder").jPages("destroy").jPages({
+                            containerID   : "itemContainer",
+                            animation     : newAnimation
+                        });
+                    });
+                });
+            }
 
             
 
             /* FUNCION TABS PROYECTOS EJECUTADOS */
 
             const tabLogo = document.querySelectorAll('.tab_logo_eject');
-            const containerProyecto = document.querySelectorAll('.tab_logo_eject');
+            const containerProyecto = document.querySelectorAll('.cont_proyecto_eject');
             let comparador = null;
 
             tabLogo.forEach((logo) => {
@@ -940,6 +1024,7 @@
                     containerProyecto.forEach((cont) => {
                         if(cont.dataset.proyecto === comparador){
                             cont.classList.add('active');
+                            console.log('si es el contenedor')
                         }else{
                             cont.classList.remove('active');
                         }
