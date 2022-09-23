@@ -1,1 +1,314 @@
-/*# sourceMappingURL=proyecto.css.map */
+.bg_dark {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 99;
+  background: rgba(9, 8, 24, 0.8196078431);
+  inset: 0;
+}
+
+.s_modal_calculadora {
+  position: fixed;
+  height: 100%;
+  z-index: 100;
+  top: 0;
+  right: 0;
+  width: 100%;
+  max-width: 520px;
+  background-color: #fff;
+  border-radius: 20px 0 0 20px;
+  padding: 30px;
+  transition: 300ms ease-out;
+  transform: translateX(100%);
+  overflow-y: scroll;
+}
+.s_modal_calculadora label {
+  font-size: 12px;
+  margin: 0 0 4px;
+  color: #9c9c9c;
+  display: inline-block;
+}
+.s_modal_calculadora.active {
+  transform: translateX(0%);
+}
+.s_modal_calculadora .close_calc {
+  text-align: right;
+  display: flex;
+  justify-content: flex-end;
+  margin: 0 0 20px;
+}
+.s_modal_calculadora .close_calc span {
+  display: block;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  font-size: 20px;
+  cursor: pointer;
+}
+.s_modal_calculadora .close_calc span:hover:before {
+  transform: translateX(10px);
+  color: #4369c6;
+}
+.s_modal_calculadora .close_calc span:before {
+  transition: 300ms ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+}
+
+.csp_calc {
+  border-radius: 20px;
+  overflow: hidden;
+  margin: 0 0 30px;
+}
+.csp_calc .title_proyecto {
+  background: #0a102d;
+  padding: 8px;
+  text-align: center;
+  color: #fff;
+  font-size: 15px;
+}
+
+.swiperCalcP .swiper-slide {
+  max-height: 200px;
+}
+.swiperCalcP img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.swiperCalcP .swiper-pagination-bullet {
+  background-color: #fff;
+  width: 10px;
+  height: 10px;
+  border-radius: 100px;
+  transition: 300ms ease;
+}
+.swiperCalcP .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  width: 15px;
+}
+
+.grand_c_inputs {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+.grand_c_inputs select {
+  cursor: pointer;
+  height: 37px;
+}
+
+.datos_cuota_inicial {
+  margin: 10px 0;
+  padding: 20px 0;
+  border-top: 1px solid #dadada;
+  border-bottom: 1px solid #dadada;
+}
+
+input {
+  outline: 0;
+}
+
+.datos_cuota_inicial {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+.x3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+}
+
+.x2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.info.highlight input {
+  background-color: #182360;
+  color: #fff;
+}
+.info input {
+  background: #e0e0e0;
+  border: 0;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #182360;
+  font-weight: 700;
+}
+
+.cont_input_x2 {
+  align-items: flex-end;
+}
+
+.datos_financiacion {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+.cont_chk {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.cont_chk label {
+  margin: 0;
+}
+
+.cont_submit .btn {
+  text-align: center;
+  justify-content: center;
+}
+
+.s_proyecto_h {
+  background: linear-gradient(180deg, rgba(198, 198, 198, 0) 0%, #E3E3E3 100%), #FFFFFF;
+  position: relative;
+  padding: 30px 0 100px;
+}
+.s_proyecto_h:before {
+  content: "";
+  position: absolute;
+  background: url("../images/diseno/proyectos_vivienda/curva_inf.svg") no-repeat center;
+  background-position: center bottom;
+  background-size: cover;
+  bottom: -1px;
+  left: 0;
+  margin: auto;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  max-height: 60px;
+  z-index: 1;
+}
+
+.precio_hp {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  align-items: center;
+  justify-content: flex-start;
+  justify-items: flex-start;
+}
+
+.price_project {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.price_project h4 {
+  color: #182360;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0 0 6px;
+}
+.price_project .cont_price {
+  background: #182360;
+  border-radius: 8px;
+  color: #FFF;
+  font-weight: 900;
+  font-size: 34px;
+  padding: 8px 14px;
+}
+.price_project span {
+  font-size: 14px;
+  text-align: center;
+  display: block;
+  margin: 6px 0 0;
+}
+
+.hero_proyecto {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.h_logo_proyect {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 30px;
+  padding: 0 0 30px;
+  border-bottom: 1px solid #DADADA;
+}
+.h_logo_proyect picture {
+  display: inline-flex;
+  max-width: 140px;
+  background-color: #FFFFFF;
+  box-shadow: 0px 10px 26px -5px rgba(49, 60, 103, 0.4);
+  border-radius: 9px;
+  background-blend-mode: multiply;
+  border-radius: 8px;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+}
+.h_logo_proyect picture img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.h_logo_proyect .title_ph {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.h_logo_proyect .title_ph .tag {
+  width: fit-content;
+  padding: 6px 20px;
+  border-radius: 100px;
+  font-weight: 700;
+  margin: 0 0 14px;
+}
+.h_logo_proyect .title_ph h5 {
+  font-size: 20px;
+  letter-spacing: 0.62em;
+  color: #2A3C7F;
+}
+.h_logo_proyect .title_ph h1 {
+  text-transform: uppercase;
+  color: #2A3C7F;
+  font-weight: 900;
+  font-size: 34px;
+}
+
+.info_heading_proy {
+  padding: 30px 0;
+  border-bottom: 1px solid #DADADA;
+  margin: 0 0 20px;
+}
+
+.item_hp {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  color: #182360;
+  margin: 0 0 10px;
+}
+.item_hp a {
+  color: #182360;
+  text-decoration: underline;
+}
+.item_hp span {
+  width: 20px;
+  height: 20px;
+  min-width: 20px;
+  align-items: center;
+  justify-content: center;
+  color: #182360;
+  display: flex;
+}/*# sourceMappingURL=proyecto.css.map */
