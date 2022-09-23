@@ -313,3 +313,132 @@ input {
         display: flex;
     }
 }
+
+.col_slide_p{
+    max-width: 680px;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    max-height: 360px;
+    gap: 10px;
+    width: 100%;
+}
+
+.mySwiper2{
+    max-height: 360px;
+    border-radius: 15px;
+    overflow: hidden;
+    //max-width: 510px;
+    width: 100%;
+    margin: 0;
+    .swiper-slide{
+        width: 100%!important;
+        height: 100%;
+    }
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.mySwiper{
+    margin: 0;
+    .swiper-slide{
+        width: 100%!important;
+        height: 100%!important;
+        max-width: 90px;
+        max-height: 63px;
+        border-radius: 4px;
+        overflow: hidden;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+.grand_cont_ctas{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin: 20px 0 0;
+    gap: 20px;
+    .btn{
+        height: 30px;
+    }
+}
+
+.c_desc_proyecto{
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 20px;
+    align-items: stretch;
+}
+
+.progress_state{
+    height: fit-content;
+    position: sticky;
+    top: 140px;
+    background: #182360;
+    box-shadow: 0px 16px 35px -8px #0000001f;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.cta_maqueta_virt{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    height: 30px;
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        max-width: 20px;
+    }
+}
+
+.mySwiper2 .swiper-button-next, .mySwiper2 .swiper-button-prev{
+    top: initial;
+    bottom: 20px;
+    position: initial;
+}
+.mySwiper2 .swiper-button-next{
+    right: 45%;
+    background-color: #FFF;
+    border-radius: 100px;
+    width: 30px;
+    height: 30px;
+    border-radius: 0 100px 100px 0;
+    border-left: 1px solid #DADADA;
+    &:after{
+        color: #0a102d;
+        font-size: 20px;
+    }
+}
+.mySwiper2 .swiper-button-prev{
+    left: 45%;
+    background-color: #FFF;
+    border-radius: 100px;
+    width: 30px;
+    height: 30px;
+    border-radius: 100px 0 0 100px;
+    border-right: 1px solid #DADADA;
+    &:after{
+        color: #0a102d;
+        font-size: 20px;
+    }
+}
+
+.container_arrows{
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+}
