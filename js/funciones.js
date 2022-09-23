@@ -1,5 +1,24 @@
 $(document).ready(function(){
 
+    /************ CARRUSEL PROYECTOS **** ********/
+    var swiper = new Swiper(".cnt_car_proy_dest .swiper-container", {
+        slidesPerView: 1,
+        breakpoints:{
+            1050:{
+                slidesPerView: 3,
+            },
+            768:{
+                slidesPerView: 2,
+            },
+            100:{
+                slidesPerView: 1,
+            },
+        },
+        navigation: {
+            nextEl: ".cnt_car_proy_dest .swiper-button-next",
+            prevEl: ".cnt_car_proy_dest .swiper-button-prev",
+          },
+    });
     /**** desplegar menu principal en movil ****/
 
     $('.btn_menu_movil').click(function(){

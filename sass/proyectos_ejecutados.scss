@@ -1,0 +1,113 @@
+.cnt_gen_proy_ejec{
+    position: relative;
+    width: 100%;
+    .s_proyecto_vivienda{
+        min-height: 240px;
+    }
+}
+.s_list_proy_dest{
+    margin-top: -80px;
+    position: relative;
+    z-index: 1;
+    padding: 0 0 64px;
+    .row_bnt{
+        display: flex;
+        justify-content: center;
+        padding: 56px 0 0;
+    }
+}
+.cnt_list_proy_ejec{
+    width: 100%;
+    max-width:1112px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap:30px;
+    
+}
+.proy_dest{
+    .btns_icons{
+        width: 37px;
+        a{
+            padding: 4px 8px;
+        }
+        &::before{
+            display: none;
+        }
+    }
+    .ctas_proyectos{
+        display: flex;
+    }
+    .ctas_proyectos{
+        justify-content: center;
+    }
+}
+
+
+
+/* RESPONISIVE */
+
+@media screen and (max-width:1200px){
+
+}
+@media screen and (max-width:1050px){
+   .cnt_list_proy_ejec{
+        gap: 16px;
+    }
+}
+@media screen and (max-width:768px){
+    .cnt_list_proy_ejec{
+        grid-template-columns: repeat(2, 1fr);
+        .card_p {
+            .name_proyecto picture {
+                width: 70px;
+                height: 70px;
+            }
+            .name_proyecto{
+                grid-template-columns: 60px 1fr;
+            }
+            .datos_proyecto{
+                padding: 20px 16px 8px;
+                h3{
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width:480px){
+    .s_carr_proy{
+        padding-bottom: 0px;    
+    }
+    .cnt_list_proy_ejec{
+        grid-template-columns: repeat(2, 1fr);
+        .card_p {
+            picture{
+                height: 120px;
+                > img{
+                    object-fit: cover;
+                }
+            }
+            .name_proyecto picture {
+                width: 60px;
+                height: 60px;
+            }
+            .name_proyecto{
+                grid-template-columns: 50px 1fr;
+            }
+        }
+    }
+    .cnt_car_proy_dest {
+        padding-top: 0;
+        .swiper-container {
+            padding-left: 0;
+            padding-right: 0;
+        }
+        .swiper-button-next{
+            right: -12px;
+        }
+        .swiper-button-prev{
+            left: -12px;
+        }
+    }
+}
