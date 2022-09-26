@@ -561,6 +561,8 @@ input {
 .swiperPlanos, .swiperTipologia {
   width: 100% !important;
   max-width: 400px;
+  display: flex;
+  flex-direction: column;
 }
 .swiperPlanos .swiper-slide, .swiperTipologia .swiper-slide {
   width: 100% !important;
@@ -797,7 +799,11 @@ input {
 .container_desc_project {
   max-width: 830px;
   width: 100%;
-  padding: 0 20px;
+}
+
+.img_slider_tipo {
+  width: 100%;
+  overflow: hidden;
 }
 
 @media screen and (max-width: 1200px) {
@@ -851,5 +857,11 @@ input {
 @media screen and (max-width: 480px) {
   .col_slide_p {
     max-height: 214px;
+  }
+  .h_logo_proyect .title_ph h5 {
+    font-size: 14px;
+  }
+  .h_logo_proyect .title_ph h1 {
+    font-size: 24px;
   }
 }/*# sourceMappingURL=proyecto.css.map */
