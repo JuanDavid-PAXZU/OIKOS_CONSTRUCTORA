@@ -571,6 +571,7 @@ input {
   max-height: 250px;
   border-radius: 20px;
   position: relative;
+  object-fit: cover;
   z-index: 1;
 }
 .swiperPlanos .txt_img_plano, .swiperTipologia .txt_img_plano {
@@ -640,6 +641,7 @@ input {
   align-items: center;
   gap: 10px;
   margin: 0 0 20px;
+  flex-wrap: wrap;
 }
 .tags_s_interes span {
   border-radius: 100px;
@@ -790,4 +792,64 @@ input {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.container_desc_project {
+  max-width: 830px;
+  width: 100%;
+  padding: 0 20px;
+}
+
+@media screen and (max-width: 1200px) {
+  .grand_cont_ctas .btn {
+    font-size: 14px;
+  }
+  .col_slide_p {
+    max-width: initial;
+  }
+}
+@media screen and (max-width: 1050px) {
+  .hero_proyecto {
+    grid-template-columns: 1fr;
+  }
+  .progress_state {
+    display: none;
+  }
+  .c_desc_proyecto {
+    grid-template-columns: 1fr;
+  }
+  .info_planos {
+    display: flex;
+    flex-direction: column;
+  }
+  .container_pp, .swiperPlanos, .swiperTipologia {
+    max-width: initial;
+  }
+  .fechas_a_obra {
+    grid-template-columns: 1fr;
+  }
+}
+@media screen and (max-width: 768px) {
+  .info_banner_calcula {
+    grid-template-columns: 1fr;
+  }
+  .info_banner_calcula {
+    max-height: initial;
+  }
+  .precio_hp {
+    grid-template-columns: 1fr;
+  }
+  .grand_cont_ctas {
+    flex-direction: column;
+  }
+  .grand_cont_ctas .btn {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 480px) {
+  .col_slide_p {
+    max-height: 214px;
+  }
 }/*# sourceMappingURL=proyecto.css.map */
