@@ -1,5 +1,48 @@
 $(document).ready(function(){
 
+    /********** ELECCION FORMULARIO CONTACTO  *********/
+
+    const mod_cnt = document.querySelectorAll(".mod_contacto");
+    const mod_inf_cnt = document.querySelectorAll(".cnt_form_mod_contacto");
+    const btn_volver = document.querySelectorAll(".btn_volver_contacto");
+
+
+    let selectCatg = null;
+    
+    mod_cnt.forEach((pest) => {
+       
+        pest.addEventListener("click", (e) => {
+            mod_cnt.forEach((el) => {
+                el.classList.remove("active");
+            });
+            e.currentTarget.classList.toggle("active");
+            
+            selectCatg = pest.dataset.cat;
+            
+            mod_inf_cnt.forEach((infel) => {
+               if(infel.dataset.cat === selectCatg){
+                   infel.classList.add("active_form");
+               }else{
+                   infel.classList.remove("active_form");
+               } 
+            });
+        });
+        
+    });
+
+    btn_volver.forEach((volver) => {
+
+        volver.addEventListener("click", (e) => {
+            mod_inf_cnt.forEach((el) => {
+                el.classList.remove("active_form");
+            });
+            mod_cnt.forEach((card) => {
+                card.classList.add("active");
+            });
+
+        });
+    });
+
     /************ CARRUSEL PROYECTOS **** ********/
     var swiper = new Swiper(".cnt_car_proy_dest .swiper-container", {
         slidesPerView: 1,
