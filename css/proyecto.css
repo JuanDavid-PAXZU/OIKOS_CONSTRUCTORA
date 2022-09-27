@@ -1,3 +1,7 @@
+* {
+  scroll-behavior: smooths;
+}
+
 .bg_dark {
   display: none;
   width: 100%;
@@ -559,7 +563,7 @@ input {
 }
 
 .swiperPlanos, .swiperTipologia {
-  width: 100% !important;
+  width: 92vw;
   max-width: 400px;
   display: flex;
   flex-direction: column;
@@ -804,6 +808,37 @@ input {
 .img_slider_tipo {
   width: 100%;
   overflow: hidden;
+  background: #FFF;
+  position: relative;
+  z-index: 1;
+  border-radius: 20px;
+}
+
+.swiper-button-prev, .swiper-rtl .swiper-button-next {
+  left: -25px;
+  background-color: #182360;
+  width: 50px;
+  height: 50px;
+  border-radius: 100px;
+}
+
+.swiper-button-next, .swiper-rtl .swiper-button-prev {
+  right: -25px;
+  background-color: #182360;
+  width: 50px;
+  height: 50px;
+  border-radius: 100px;
+}
+
+.swiper-button-next:after, .swiper-button-prev:after {
+  font-size: 20px;
+  padding-right: 18px;
+  color: #FFF;
+}
+
+.swiper-button-prev:after {
+  padding-left: 18px;
+  padding-right: 0;
 }
 
 @media screen and (max-width: 1200px) {
@@ -863,5 +898,17 @@ input {
   }
   .h_logo_proyect .title_ph h1 {
     font-size: 24px;
+  }
+  .c_zonas_c {
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 20px;
+  }
+}
+@media screen and (max-width: 390px) {
+  .item_zc {
+    text-align: center;
+  }
+  .c_zonas_c {
+    grid-template-columns: 1fr 1fr;
   }
 }/*# sourceMappingURL=proyecto.css.map */

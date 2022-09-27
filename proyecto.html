@@ -13,6 +13,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="plugins/swiperjs/swiper-bundle.min.css">
+    <link href="plugins/lightbox/lightbox.min.css" rel="stylesheet" />
+    <link href="plugins/modal_video/modal-video.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/estilos.css">
     <link rel="stylesheet" href="css/proyecto.css">
     
@@ -20,8 +22,7 @@
     <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
     <link href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" rel="stylesheet">
 
-    <!-- SCRIPT -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    
 
 </head>
 <body>
@@ -253,34 +254,35 @@
             <div class="cnt_central">
                 <div class="c_desc_proyecto">
                     <aside class="progress_state">
-                        <a href="" class="state active">
+                        <a href="#sect1" class="state active">
                             <span class="fas fa-circle"></span>
                             <h4>Sobre el proyecto</h4>
                         </a>
-                        <a href="" class="state">
-                            <span class="fas fa-circle-notch"></span>
-                            <h4>Sitios de interés</h4>
-                        </a>
-                        <a href="" class="state">
+                        <a href="#sect2" class="state">
                             <span class="fas fa-circle-notch"></span>
                             <h4>Planos</h4>
                         </a>
-                        <a href="" class="state">
+                        <a href="#sect3" class="state">
                             <span class="fas fa-circle-notch"></span>
-                            <h4>Avance de obra</h4>
+                            <h4>Sitios de iterés</h4>
                         </a>
-                        <a href="" class="state">
+                        <a href="#sect4" class="state">
                             <span class="fas fa-circle-notch"></span>
-                            <h4>Recorrido 360º</h4>
+                            <h4>Zonas comunes</h4>
                         </a>
-                        <a href="" class="state">
+                        <a href="#sect5" class="state">
                             <span class="fas fa-circle-notch"></span>
-                            <h4>Maqueta virtual</h4>
+                            <h4>Avance obra</h4>
                         </a>
+                        <a href="#sect6" class="state">
+                            <span class="fas fa-circle-notch"></span>
+                            <h4>Calcula</h4>
+                        </a>
+                        
                     </aside>
                     <div class="container_desc_project">
 
-                        <div class="info_proj">
+                        <div class="info_proj" id="sect1">
                             <h3 class="title_section"> <span> Descripción del</span> Proyectos</h3>
                             <p>Es un proyecto de vivienda cerca a girardot con subsidio conformado por 5 Torres de 8 pisos de altura con ascensor. Este proyecto de vivienda de interés social en Ricaurte, está ubicado en la exclusiva zona Peñalisa y cuenta con dos tipos de apartamentos a la venta de más de 55m². 
 
@@ -295,16 +297,18 @@
                             </picture>
                         </div>
 
-                        <div class="info_planos">
+                        <div class="info_planos" id="sect2">
 
                             <div class="container_pp">
                                 <h3 class="">Planos</h3>
-                                <!-- Swiper -->
+                                
                                 <div class="swiper swiperPlanos">
                                     <div class="swiper-wrapper">
                                         <div class="swiper-slide">
                                             <div class="img_slider_tipo">
-                                                <img width="409" height="247" src="https://picsum.photos/600/400" alt="">
+                                                <a href="images/diseno/int_proyecto/plano.png" data-lightbox="plano">
+                                                    <img width="409" height="247" src="images/diseno/int_proyecto/plano.png" alt="">
+                                                </a>
                                             </div>
                                             <div class="txt_img_plano">
                                                 <h4>Apartamento tipo A</h4>
@@ -317,7 +321,10 @@
                                         </div>
                                         <div class="swiper-slide">
                                             <div class="img_slider_tipo">
-                                                <img width="409" height="247" src="https://picsum.photos/600/400" alt="">
+                                                <a href="images/diseno/int_proyecto/plano.png" data-lightbox="plano">
+                                                    <img width="409" height="247" src="images/diseno/int_proyecto/plano.png" alt="">
+                                                </a>
+
                                             </div>
                                             <div class="txt_img_plano">
                                                 <h4>Apartamento tipo A</h4>
@@ -330,7 +337,9 @@
                                         </div>
                                         <div class="swiper-slide">
                                             <div class="img_slider_tipo">
-                                                <img width="409" height="247" src="https://picsum.photos/600/400" alt="">
+                                                <a href="images/diseno/int_proyecto/plano.png" data-lightbox="plano">
+                                                    <img width="409" height="247" src="images/diseno/int_proyecto/plano.png" alt="">
+                                                </a>
                                             </div>
                                             <div class="txt_img_plano">
                                                 <h4>Apartamento tipo A</h4>
@@ -343,7 +352,9 @@
                                         </div>
                                         <div class="swiper-slide">
                                             <div class="img_slider_tipo">
-                                                <img width="409" height="247" src="https://picsum.photos/600/400" alt="">
+                                                <a href="images/diseno/int_proyecto/plano.png" data-lightbox="plano">
+                                                    <img width="409" height="247" src="images/diseno/int_proyecto/plano.png" alt="">
+                                                </a>
                                             </div>
                                             <div class="txt_img_plano">
                                                 <h4>Apartamento tipo A</h4>
@@ -368,7 +379,9 @@
                                     <div class="swiper-wrapper">
                                         <div class="swiper-slide">
                                             <div class="img_slider_tipo">
-                                                <img width="409" height="247" src="https://picsum.photos/600/400" alt="">
+                                                <a href="images/diseno/int_proyecto/plano.png" data-lightbox="tipologia">
+                                                    <img width="409" height="247" src="images/diseno/int_proyecto/plano.png" alt="">
+                                                </a>
                                             </div>
                                             <div class="txt_img_plano">
                                                 <h4>Apartamento tipo A</h4>
@@ -381,7 +394,9 @@
                                         </div>
                                         <div class="swiper-slide">
                                             <div class="img_slider_tipo">
-                                                <img width="409" height="247" src="https://picsum.photos/600/400" alt="">
+                                                <a href="images/diseno/int_proyecto/plano.png" data-lightbox="tipologia">
+                                                    <img width="409" height="247" src="images/diseno/int_proyecto/plano.png" alt="">
+                                                </a>
                                             </div>
                                             <div class="txt_img_plano">
                                                 <h4>Apartamento tipo A</h4>
@@ -394,7 +409,9 @@
                                         </div>
                                         <div class="swiper-slide">
                                             <div class="img_slider_tipo">
-                                                <img width="600" height="600" src="https://picsum.photos/600/400" alt="">
+                                                <a href="images/diseno/int_proyecto/plano.png" data-lightbox="tipologia">
+                                                    <img width="409" height="247" src="images/diseno/int_proyecto/plano.png" alt="">
+                                                </a>
                                             </div>
                                             <div class="txt_img_plano">
                                                 <h4>Apartamento tipo A</h4>
@@ -407,7 +424,9 @@
                                         </div>
                                         <div class="swiper-slide">
                                             <div class="img_slider_tipo">
-                                                <img width="600" height="600" src="https://picsum.photos/600/400" alt="">
+                                                <a href="images/diseno/int_proyecto/plano.png" data-lightbox="tipologia">
+                                                    <img width="409" height="247" src="images/diseno/int_proyecto/plano.png" alt="">
+                                                </a>
                                             </div>
                                             <div class="txt_img_plano">
                                                 <h4>Apartamento tipo A</h4>
@@ -428,7 +447,7 @@
                         </div>
 
 
-                        <div class="info_sitios_interes">
+                        <div class="info_sitios_interes" id="sect3">
                             <h3 class="title_section"> <span> Sitios de </span>Interés</h3>
                             <div class="tags_s_interes">
                                 <span>Educación</span>
@@ -446,7 +465,7 @@
                             </div>
                         </div>
 
-                        <div class="info_zonas_comunes">
+                        <div class="info_zonas_comunes" id="sect4">
                             <h3 class="title_section"><span> Zonas</span> Comunes</h3>
                             <div class="c_zonas_c">
                                 <div class="item_zc">
@@ -497,7 +516,8 @@
 
                             </div>
                         </div>
-                        <div class="info_avance_obra">
+
+                        <div class="info_avance_obra" id="sect5">
                             <h3 class="title_section"><span> Avance de</span> obra</h3>
                             <div class="fechas_a_obra">
                                 <div class="tabs_nav_obra">
@@ -507,19 +527,23 @@
                                     <a>Junio 2022</a>
                                 </div>
                                 <div class="cont_tab_video" data-obra="1">
-                                    <img width="517" height="301" src="https://picsum.photos/600" alt="">
+                                    <a data-video-id="QwsRP5RKm7M" class="js-modal-btn">
+                                        <img width="517" height="301" src="https://picsum.photos/600" alt="">
+                                    </a>
+                                    
                                 </div>
                             </div>
                             <div class="resumen_a_obra">
                                 <b> Lorem ipsum dolor sit amet, </b>consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus.
                             </div>
                         </div>
-                        <div class="info_banner_calcula">
+
+                        <div class="info_banner_calcula" id="sect6">
                             <picture>
                                 <img width="571" height="110" src="images/diseno/int_proyecto/img_calcula.jpg" alt="">
                             </picture>
                             <div class="cnt_btn_calc">
-                                <a href="" class="btn contacto_h">Calcula <span class="fas fa-calculator"></span> </a>
+                                <a class="btn contacto_h btn_calc_1">Calcula <span class="fas fa-calculator"></span> </a>
                             </div>
                         </div>
                     </div>
@@ -527,9 +551,6 @@
             </div>
         </section>
 
-        <section class="s_proyectos_dest">
-            
-        </section>
 
         <!-- MODAL CALCULADORA -->
 
@@ -814,7 +835,11 @@
 
     <!-- SCRIPT -->
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="plugins/swiperjs/swiper-bundle.min.js"></script>
+    <script src="plugins/lightbox/lightbox.min.js"></script>
+    <script src="plugins/modal_video/jquery-modal-video.min.js"></script>
+    <script src="plugins/modal_video/modal-video.min.js"></script>
     <script src="js/funciones.js"></script>
 
     <script>
@@ -851,8 +876,8 @@
 
             /* ACTIVADORES DE MODAL CALCULADORA */
 
-            const btn1 = document.querySelector('.btn_calc_1'); 
-            const btn2 = document.querySelector('.btn_calc_2'); 
+            const btn1 = document.querySelectorAll('.btn_calc_1'); 
+            // const btn2 = document.querySelector('.btn_calc_2'); 
 
             const backButtonCalculadora = document.querySelector('.close_calc span');
             const modalCalculadora = document.querySelector('.s_modal_calculadora');
@@ -868,12 +893,11 @@
                 $(modalCalculadora).removeClass('active');
             });
 
-
-
-            $(btn1 || btn2 ).click(function(){
+            $(btn1).click(function(){
                 $(bg_dark).fadeIn();
                 $(modalCalculadora).addClass('active');
             });
+
 
             /* FUNCION DE SLIDER CALCULADORA MODAL */
 
@@ -928,7 +952,37 @@
             sliderTiposAptos();
             sliderTipologia();
 
+            /* FUNCION LIGHTBOX PLANOS Y TIPOS */
 
+            function lighbox(){
+                lightbox.option({
+                    'resizeDuration': 200,
+                    'wrapAround': true
+                });
+            }
+
+            /* FUNCION LIGHTBOX VIDEO */
+
+            lighbox();
+            $(".js-modal-btn").modalVideo();
+
+            /* FUNCION SCROLL ASIDE NAV */
+
+            function scrollAside(){
+                const btnAside = document.querySelectorAll('.progress_state .state');
+
+                $(btnAside).click(function(){
+                    $(btnAside).removeClass('active');
+                    $(btnAside).find('span').removeClass('fa-circle');
+                    $(btnAside).find('span').addClass('fa-circle-notch');
+                    
+                    $(this).addClass('active');
+                    $(this).find('span').removeClass('fa-circle-notch');
+                    $(this).find('span').addClass('fa-circle');
+                });
+            }
+
+            scrollAside();
         });
     </script>
 
