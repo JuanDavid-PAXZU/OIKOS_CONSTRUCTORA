@@ -832,12 +832,12 @@ input {
     height: 50px;
     border-radius: 100px;
 }
-.swiper-button-next:after, .swiper-button-prev:after{
+.container_desc_project .swiper-button-next:after, .container_desc_project .swiper-button-prev:after{
     font-size: 20px;
     padding-right: 18px;
     color: #FFF;
 }
-.swiper-button-prev:after{
+.container_desc_project .swiper-button-prev:after{
     padding-left: 18px;
     padding-right: 0;
 }
@@ -889,6 +889,7 @@ input {
         text-align: center;
         justify-content: center;
     }
+    
 }
 @media screen and (max-width:480px){
     .col_slide_p{
@@ -904,6 +905,7 @@ input {
         grid-template-columns: 1fr 1fr 1fr;
         padding: 20px;
     }
+    
 }
 @media screen and (max-width:390px){
     .item_zc{
