@@ -1,5 +1,5 @@
 .bg_grad {
-  background: linear-gradient(180deg, #E9EDF9 0%, rgba(233, 237, 247, 0) 16.67%, #F0F2F7 100%);
+  background: linear-gradient(to top, #F0F2F7, #ffffff, #EEF1F9);
 }
 
 .c_edge {
@@ -114,7 +114,7 @@
   max-height: 280px;
   background: url("../images/diseno/home/curva_azul_edge.svg") no-repeat center bottom;
   background-size: cover;
-  top: 0;
+  top: -2;
   left: 0;
   right: 0;
   margin: auto;
@@ -205,9 +205,12 @@
 }
 
 .s_cards_proyectos {
-  padding: 100px 0 40px;
+  padding: 0px 0 40px;
   position: relative;
   z-index: 1;
+}
+.s_cards_proyectos .title_section {
+  margin-top: 0;
 }
 
 .c_cards_proyectos {
@@ -404,4 +407,224 @@
 .card_p .btn {
   width: fit-content;
   justify-self: flex-end;
+}
+
+/* ESTILOS HOME HERO SECTION */
+.s_home_hero {
+  position: relative;
+}
+.s_home_hero::before {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  width: 100%;
+  height: 100%;
+  max-height: 120px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  background: url("../images/diseno/home/curva_azul_hero.svg") no-repeat center top;
+  background-size: cover;
+  z-index: 10;
+}
+
+.s_home_hero .swiper-slide {
+  min-height: 650px;
+  padding: 80px;
+}
+.s_home_hero .swiper-horizontal > .swiper-pagination-bullets, .s_home_hero .swiper-pagination-bullets.swiper-pagination-horizontal, .s_home_hero .swiper-pagination-custom, .s_home_hero .swiper-pagination-fraction {
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  left: 20px;
+  top: -80px;
+  margin: auto;
+  height: 100%;
+}
+.s_home_hero .swiper-horizontal > .swiper-pagination-bullets span, .s_home_hero .swiper-pagination-bullets.swiper-pagination-horizontal span, .s_home_hero .swiper-pagination-custom span, .s_home_hero .swiper-pagination-fraction span {
+  width: 12px;
+  height: 12px;
+  background: #253489;
+  border-radius: 100px;
+  transition: 300ms ease;
+}
+.s_home_hero .swiper-horizontal > .swiper-pagination-bullets span.swiper-pagination-bullet-active, .s_home_hero .swiper-pagination-bullets.swiper-pagination-horizontal span.swiper-pagination-bullet-active, .s_home_hero .swiper-pagination-custom span.swiper-pagination-bullet-active, .s_home_hero .swiper-pagination-fraction span.swiper-pagination-bullet-active {
+  height: 20px;
+}
+
+.bg_img_h_hero {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  inset: 0;
+  z-index: 1;
+}
+.bg_img_h_hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  background: #FFFFFF;
+  z-index: 2;
+  mix-blend-mode: color;
+}
+.bg_img_h_hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.8509803922), #ffffff);
+  z-index: 2;
+  opacity: 1;
+}
+.bg_img_h_hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cnt_h_hero {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  position: relative;
+  z-index: 2;
+}
+
+.grand_img_h_hero {
+  position: relative;
+}
+.grand_img_h_hero:before {
+  content: "";
+  position: absolute;
+  left: -40px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 20px;
+  height: 90px;
+  background: url("../images/diseno/home/puntos.svg") no-repeat center;
+  background-size: contain;
+}
+.grand_img_h_hero picture {
+  display: flex;
+  align-items: center;
+  justify-self: center;
+}
+.grand_img_h_hero picture img {
+  width: 100%;
+  object-fit: cover;
+}
+.grand_img_h_hero picture.grand_img_hero_mini {
+  position: absolute;
+  z-index: 2;
+  max-width: 200px;
+  bottom: 40px;
+  left: -100px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 8px 21px 30px -14px #112333;
+  min-height: 134px;
+}
+.grand_img_h_hero picture.grand_img_hero1 {
+  width: 100%;
+  height: 100%;
+  border-radius: 160px 30px 160px 30px;
+  overflow: hidden;
+  max-height: 454px;
+  min-height: 454px;
+}
+
+.desc_txt_hero {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.aside_prjct {
+  border-radius: 16px;
+  background-color: #FFF;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 160px;
+  min-width: 150px;
+  z-index: 2;
+}
+.aside_prjct picture {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+.aside_prjct picture img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.dt_prjct {
+  border-radius: 15px;
+  padding: 16px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.item_prjct {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.datos_info_prjct {
+  max-width: 680px;
+  position: relative;
+  z-index: 1;
+}
+.datos_info_prjct .tag {
+  padding: 4px 20px;
+  border-radius: 100px;
+  width: fit-content;
+}
+.datos_info_prjct h1 {
+  line-height: 1;
+  margin: 14px 0;
+  color: #182360;
+  text-align: left;
+}
+.datos_info_prjct h3 {
+  font-size: 20px;
+  font-weight: 400;
+  text-align: left;
+  padding: 0 0 6px;
+  border-bottom: 1px solid #182360;
+  width: fit-content;
+  color: #182360;
+  position: relative;
+}
+.datos_info_prjct h3::before {
+  content: "";
+  position: absolute;
+  width: 80px;
+  height: 6px;
+  border-radius: 100px;
+  background-color: #3E6DDF;
+  bottom: -3px;
+  left: 30px;
+}
+.datos_info_prjct h2 {
+  font-size: 34px;
+  color: #182360;
+  margin: 10px 0;
+}
+.datos_info_prjct h2 span {
+  font-size: 23px;
 }/*# sourceMappingURL=home.css.map */
