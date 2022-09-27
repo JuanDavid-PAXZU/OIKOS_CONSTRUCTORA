@@ -830,13 +830,13 @@ input {
   border-radius: 100px;
 }
 
-.swiper-button-next:after, .swiper-button-prev:after {
+.container_desc_project .swiper-button-next:after, .container_desc_project .swiper-button-prev:after {
   font-size: 20px;
   padding-right: 18px;
   color: #FFF;
 }
 
-.swiper-button-prev:after {
+.container_desc_project .swiper-button-prev:after {
   padding-left: 18px;
   padding-right: 0;
 }
