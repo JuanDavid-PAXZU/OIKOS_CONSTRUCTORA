@@ -6,20 +6,6 @@
   position: relative;
   padding: 40px 20px 100px;
 }
-.c_gracias_404:before {
-  content: "";
-  position: absolute;
-  bottom: -30%;
-  left: 0;
-  right: 0;
-  background: rgba(225, 233, 238, 0.7);
-  filter: blur(72px);
-  width: 80%;
-  height: 50%;
-  border-radius: 100%;
-  margin: 0 auto;
-  z-index: -1;
-}
 
 picture {
   position: relative;
@@ -72,6 +58,7 @@ h2 {
   max-width: 550px;
   margin: 30px 0;
   line-height: 1.2;
+  text-align: center;
 }
 
 .txt_page {
@@ -83,6 +70,24 @@ h2 {
 .c_404 {
   height: 60vh;
   padding: 60px 0 100px;
+  position: relative;
+}
+.c_404:after {
+  content: "";
+  position: absolute;
+  bottom: 40px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 100%;
+  max-width: 600px;
+  height: 100%;
+  max-height: 90px;
+  background: url("../images/diseno/gracias_404/tuercas.svg") no-repeat center;
+  background-size: contain;
+}
+.c_404 .btn {
+  height: 40px;
 }
 
 @media screen and (max-width: 480px) {
