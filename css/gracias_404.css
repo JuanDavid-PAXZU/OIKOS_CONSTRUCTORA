@@ -6,17 +6,16 @@
   position: relative;
   padding: 40px 20px 100px;
 }
-
-picture {
+.c_gracias_404 picture {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-picture img {
+.c_gracias_404 picture img {
   object-fit: contain;
 }
-picture:before {
+.c_gracias_404 picture:before {
   content: "";
   position: absolute;
   left: -30%;
@@ -27,7 +26,7 @@ picture:before {
   background-size: contain;
   z-index: 1;
 }
-picture:after {
+.c_gracias_404 picture:after {
   content: "";
   position: absolute;
   right: -20%;
@@ -88,6 +87,50 @@ h2 {
 }
 .c_404 .btn {
   height: 40px;
+}
+
+.bg_gracias {
+  background: linear-gradient(to top, rgba(233, 237, 247, 0.16), #E8EBF1);
+  background-blend-mode: normal, color;
+  position: relative;
+  padding-top: 40px;
+}
+.bg_gracias h1 {
+  font-weight: 300;
+  margin: 40px 0 10px;
+  text-align: center;
+}
+.bg_gracias h1 b {
+  font-weight: 800;
+}
+.bg_gracias h3 {
+  font-size: 24px;
+  line-height: 1.3;
+  color: #131D54;
+  max-width: 550px;
+  margin: 0px auto 30px;
+  text-align: center;
+}
+.bg_gracias::before {
+  content: "";
+  position: absolute;
+  left: 2%;
+  top: 10%;
+  background: url("../images/diseno/gracias_404/puntos2.svg") no-repeat center;
+  background-size: contain;
+  width: 30px;
+  height: 90px;
+}
+.bg_gracias::after {
+  content: "";
+  position: absolute;
+  right: 2%;
+  bottom: 10%;
+  background: url("../images/diseno/gracias_404/puntos2.svg") no-repeat center;
+  background-size: contain;
+  width: 30px;
+  height: 90px;
+  transform: rotate(180deg);
 }
 
 @media screen and (max-width: 480px) {
