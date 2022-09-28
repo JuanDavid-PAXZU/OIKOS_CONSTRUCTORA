@@ -175,6 +175,10 @@
   justify-content: space-between;
   row-gap: 16px;
 }
+.s_form_cnt select, .s_form_cnt textarea {
+  font-size: 14px;
+  color: #626262;
+}
 
 .cnt_campo_form {
   width: 100%;

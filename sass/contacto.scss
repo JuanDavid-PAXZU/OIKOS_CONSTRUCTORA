@@ -158,7 +158,12 @@
     flex-wrap: wrap;
     justify-content: space-between;
     row-gap: 16px;
+    select, textarea{
+        font-size: 14px;
+        color:  #626262;
+    }
 }
+
 .cnt_campo_form{
     width: 100%;
     position: relative;

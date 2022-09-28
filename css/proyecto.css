@@ -1,5 +1,5 @@
 * {
-  scroll-behavior: smooths;
+  scroll-behavior: smooth;
 }
 
 .bg_dark {
@@ -77,6 +77,18 @@
   font-size: 15px;
 }
 
+.swiperCalcP {
+  position: relative;
+}
+.swiperCalcP::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.3803921569), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
+  z-index: 2;
+  pointer-events: none;
+}
 .swiperCalcP .swiper-slide {
   max-height: 200px;
 }
@@ -94,6 +106,9 @@
 }
 .swiperCalcP .swiper-pagination-bullet.swiper-pagination-bullet-active {
   width: 15px;
+}
+.swiperCalcP .swiper-pagination {
+  bottom: 0 !important;
 }
 
 .grand_c_inputs {
@@ -348,6 +363,7 @@ input {
   margin: 0;
 }
 .mySwiper .swiper-slide {
+  cursor: pointer;
   width: 100% !important;
   height: 100% !important;
   max-width: 90px;
@@ -485,7 +501,7 @@ input {
   align-items: center;
   justify-content: flex-start;
   gap: 10px;
-  color: #404fa4;
+  color: #FFF;
   position: relative;
   z-index: 3;
   margin: 0 0 14px;
@@ -501,7 +517,7 @@ input {
   font-weight: 300;
 }
 .state.active {
-  color: #FFF;
+  color: #4584e9;
 }
 .state:hover {
   color: #929aca;
@@ -758,7 +774,6 @@ input {
 }
 .cont_tab_video img {
   width: 100%;
-  height: 100%;
   object-fit: cover;
 }
 
@@ -841,6 +856,10 @@ input {
   padding-right: 0;
 }
 
+.whatsapp {
+  background: linear-gradient(90deg, #35C24D 0%, #48E263 45.83%, #35C24D 100%);
+}
+
 @media screen and (max-width: 1200px) {
   .grand_cont_ctas .btn {
     font-size: 14px;
@@ -876,6 +895,19 @@ input {
   }
   .info_banner_calcula {
     max-height: initial;
+    position: relative;
+  }
+  .info_banner_calcula::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(25, 35, 111, 0.8784313725), rgba(41, 57, 160, 0));
+    inset: 0;
+  }
+  .cnt_btn_calc {
+    position: absolute;
+    margin: 0;
   }
   .precio_hp {
     grid-template-columns: 1fr;
