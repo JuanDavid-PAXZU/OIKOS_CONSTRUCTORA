@@ -727,6 +727,12 @@ h1 {
   border-color: #13203E;
 }
 
+.precio_usd {
+  width: 100%;
+  text-align: center;
+  font-size: 18px;
+}
+
 /*********************/
 @media screen and (max-width: 1400px) {
   .nav ul li {
