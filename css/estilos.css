@@ -731,6 +731,10 @@ h1 {
   color: #436ac9;
   width: 100%;
   text-align: center;
+  font-size: 14px;
+}
+
+.precio_usd b {
   font-size: 18px;
 }
 
